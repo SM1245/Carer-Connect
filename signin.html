@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--ajusts the page to the Dimensions of the device that is being used to view it-->
+    <link rel="stylesheet" href="background_style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CARER CONNECT</title> 
+</head>
+<Body  styke="background-color: #FFFF00;" onLoad="showSection(section2)">
+    <nav class="navigationbar">           <!--Adding navigation bar-->
+        <div class="Company-name"> CARER CONNECT</div>
+        <div class ="navbar-links">
+            <Right><a href="Homepage.html">Home</a></Right>
+            <Right><a href="aboutus.html">About us</a></Right>
+            <Right><a href="contactus.html">Contact us</a></Right>
+            <Right><a href="signin.html">Sign in</a></Right>
+            <Right><a href="CARERREGISTRATION.html">Register</a></Right>
+        </nav>
+        
+<input type="radio" name="reg" id="csfr"> carer sign in
+<!--using the check attribute to ensure that a radio button is selected by default-->
+<input type="radio" name="reg" id="isfr" checked> individual sign in
+<div>
+<form id="csf">
+
+Carer registration number: <input type="text" name="Carer registration number" required="required">
+<br>
+Username: <centre><input type="text" username="username"></centre>
+<br> 
+Password: <input type="password" password="password" maxlength="8"> 
+<br>
+<input type="checkbox" name="Remember me" id="rememberme" onclick="setcookie()">Remember me
+<button>Log in</button>
+<br>
+<a href="CARERREGISTRATION.html">Don't have an account. Register</a> <!--Redirecting to registration page-->
+</form>
+</div>
+<form id="isf">
+Username: <centre><input type="text" username="username"></centre>
+<br> 
+Password: <input type="password" password="password" maxlength="8"> 
+<br>
+<input type="checkbox" name="Remember me" id="rememberme" onclick="setcookie()">Remember me
+<button>Log in</button>
+<br>
+<a href="CARERREGISTRATION.html">Don't have an account. Register</a> <!--Redirecting to registration page-->
+</div>
+</form>
+</body>   
+</html>
+
+<script>
+    const btn1 = document.getElementById("csfr");
+    const btn2 = document.getElementById("isfr");
+    
+    
+    const section1 = document.getElementById("csf");
+    const section2 = document.getElementById("isf");
+    function showSection(section) {
+    if(section == section2)
+    document.getElementById("irf");
+    else
+    document.getElementById("crf");
+    section1.style.display = "none";
+    section2.style.display = "none";
+    section.style.display = "block";
+    }
+    btn1.addEventListener("click", () => {
+    showSection(section1);
+    });
+    btn2.addEventListener("click", () => {
+    showSection(section2);
+    });
+    </script>
+    <!--https://url6.mailanyone.net/scanner?m=1pX0Y4-00061J-67&d=4%7Cmail%2F14%2F1677592800%2F1pX0Y4-00061J-67%7Cin6a%7C57e1b682%7C10977208%7C9441127%7C63FE09484111F82FADDCCD4F1EB31E97&o=%2Fphtw%3A%2Fwtsfew.rksogerkge%2F.ogesv-holo-awtotidf-cnaes-iroaswmpgurdjin--spsav%2Fritactg%26--&s=RNKxds-ZBp1Fp41XSe7aZGhW11s;
+    <!--https://url6.mailanyone.net/scanner?m=1pX0Y4-00061J-67&d=4%7Cmail%2F14%2F1677592800%2F1pX0Y4-00061J-67%7Cin6a%7C57e1b682%7C10977208%7C9441127%7C63FE09484111F82FADDCCD4F1EB31E97&o=%2Fphte%3A%2Fdts.oveoermlprlzi%2F.oglaoUens%2Fdc-SMb%2FW%2FHTLe%2FtrAtsbuetieq%2Fr-irdeutg%26-&s=gtsjIYK1eJ7tIude3M2Pg3vNR0Q;-->
+    
+ <!--Script used to get cookie to remember user's details and to store them-->
+ <script type ="text/javascript">              
+    function setcookie(){                                       
+        var u =document.getElementById('username').value;
+        var p=document.getElementById('password').value;
+        document.cookie="myusername="+u+";path=file:///C:/Users/mr_wo/Desktop/Website/signin.html";
+    }
+ </script>

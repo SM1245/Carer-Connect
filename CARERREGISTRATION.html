@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--ajusts the page to the Dimensions of the device that is being used to view it-->
+    <link rel="stylesheet" href="background_style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CARER CONNECT</title> 
+</head>
+<Body  styke="background-color: #FFFF00;" onLoad="showSection(section2)">
+    <nav class="navigationbar">           <!--Adding navigation bar-->
+        <div class="Company-name"> CARER CONNECT</div>
+        <div class ="navbar-links">
+            <Right><a href="Homepage.html">Home</a></Right>
+            <Right><a href="aboutus.html">About us</a></Right>
+            <Right><a href="contactus.html">Contact us</a></Right>
+            <Right><a href="signin.html">Sign in</a></Right>
+            <Right><a href="CARERREGISTRATION.html">Register</a></Right>
+        </nav>
+<br>
+<br>
+<input type="radio" name="reg" id="crb"> carer registration
+<!--using the check attribute to ensure that a radio button is selected by default-->
+<input type="radio" name="reg" id="irb" checked> individual registration
+<div>
+<form id="crf">
+Carer registration number: <input type="text" name="Carer registration number" required="required">
+<br>
+First Name: <input type="text" name="First Name" required="required">
+<br>
+Middle Name: <input type="text" name="Middle Name">
+<br>
+last Name: <input type="text" name="last Name" required="required">
+<br>
+Age: <input type="number" name="age" required="required">
+<br>
+Gender
+<br>
+<input type="radio" name="gender" > Male
+<input type="radio" name="gender" > Female
+<input type="radio" name="gender" > Other
+<br>
+if other please specify
+<br>
+<textarea rows="5" cols="50" name="others"></textarea>
+<br>
+Brief Services description
+<br>
+<textarea rows="5" cols="50" name="Needs" required="required" ></textarea>
+<br>
+Mobile Number: <input type="number" name="Mobile Number" required="required">
+<br>
+Landline Number: <input type="number" name="Landline Number"required="required">
+<br>
+Username: <input type="text" name="Username" required="required">
+<br>
+Password: <input id="password" type="password" name="password" maxlength="8" required="required">
+<br>
+Confirm Password: <input id="confirm_pass" type="password" name="passwordvonfirm" maxlength="8" required="required" validate="validate_password()">
+<br>
+<br>
+<span id="wrong_pass_alert"></span>
+<div class="buttons">
+<button id="create"
+class="submit_btn"
+onclick="wrong_pass_alert()">
+Submit
+</button>
+<button type="reset">Clear</button>
+
+</div>
+</form>
+</div>
+
+
+
+
+<div>
+<form id="irf">
+First Name: <input type="text" name="First Name" required="required">
+<br>
+Middle Name: <input type="text" name="Middle Name">
+<br>
+last Name: <input type="text" name="last Name" required="required">
+<br>
+Age: <input type="number" name="age" required="required">
+<br>
+Gender
+<br>
+<input type="radio" name="gender" /> Male
+<input type="radio" name="gender" /> Female
+<input type="radio" name="gender" id="rbfo"/> Other
+<br>
+if other please specify
+<br>
+<span id = "bfo">
+<textarea rows="5" cols="50" name="others" ></textarea>
+</span>
+<br>
+Brief Needs description
+<br>
+<textarea rows="5" cols="50" name="Needs" required="required" ></textarea>
+<br>
+Mobile Number: <input type="number" name="Mobile Number" required="required">
+<br>
+Landline Number: <input type="number" name="Landline Number" required="required">
+<br>
+Username: <input type="text" name="Username" required="required">
+<br>
+Password: <input id="password" type="password" name="password" maxlength="8" required="required">
+<br>
+Confirm Password: <input id="confirm_pass" type="password" name="passwordvonfirm" maxlength="8" required="required" validate="validate_password()">
+<br>
+<br>
+<span id="wrong_pass_alert"></span>
+<div class="buttons">
+<button id="create"
+class="submit_btn"
+onclick="wrong_pass_alert()">
+Submit
+</button>
+<button type="reset">Clear</button>
+</div>
+</form>
+<script>
+    const btn1 = document.getElementById("crb");
+    const btn2 = document.getElementById("irb");
+    const btn3 = document.getElementById("rbfo");
+    
+    const section1 = document.getElementById("crf");
+    const section2 = document.getElementById("irf");
+    const section3 = document.getElementById("bfo");
+    function showSection(section) {
+    section1.style.display = "none";
+    section2.style.display = "none";
+    section3.style.display = "none";
+    section.style.display = "block";
+
+    if(section == section1)
+    document.getElementById("irf").style.display='block';
+    //document.getElementById("crf").style.display='none';
+    else if((section == section2))
+    document.getElementById("crf").style.display='block';
+    else if (section == section3)
+    document.getElementById("bfo").style.display='block';
+    section3.style.display = "block";
+    }
+    btn1.addEventListener("click", () => {
+    showSection(section1);
+    });
+    btn2.addEventListener("click", () => {
+    showSection(section2);
+    });
+    btn3.addEventListener("click", () => {
+    showSection(section3);
+    });
+    </script>
+    <!--https://url6.mailanyone.net/scanner?m=1pX0Y4-00061J-67&d=4%7Cmail%2F14%2F1677592800%2F1pX0Y4-00061J-67%7Cin6a%7C57e1b682%7C10977208%7C9441127%7C63FE09484111F82FADDCCD4F1EB31E97&o=%2Fphtw%3A%2Fwtsfew.rksogerkge%2F.ogesv-holo-awtotidf-cnaes-iroaswmpgurdjin--spsav%2Fritactg%26--&s=RNKxds-ZBp1Fp41XSe7aZGhW11s;
+    <!--https://url6.mailanyone.net/scanner?m=1pX0Y4-00061J-67&d=4%7Cmail%2F14%2F1677592800%2F1pX0Y4-00061J-67%7Cin6a%7C57e1b682%7C10977208%7C9441127%7C63FE09484111F82FADDCCD4F1EB31E97&o=%2Fphte%3A%2Fdts.oveoermlprlzi%2F.oglaoUens%2Fdc-SMb%2FW%2FHTLe%2FtrAtsbuetieq%2Fr-irdeutg%26-&s=gtsjIYK1eJ7tIude3M2Pg3vNR0Q;-->
+    <a href="signin.html">already have an account. sign in</a> 
+</div>
+
+<!--https://url6.mailanyone.net/scanner?m=1pX0Y4-00061J-67&d=4%7Cmail%2F14%2F1677592800%2F1pX0Y4-00061J-67%7Cin6a%7C57e1b682%7C10977208%7C9441127%7C63FE09484111F82FADDCCD4F1EB31E97&o=%2Fphtw%3A%2Fwtsfew.rksogerkge%2F.ogesv-holo-awtotidf-cnaes-iroaswmpgurdjin--spsav%2Fritactg%26--&s=RNKxds-ZBp1Fp41XSe7aZGhW11s;
+<!--https://url6.mailanyone.net/scanner?m=1pX0Y4-00061J-67&d=4%7Cmail%2F14%2F1677592800%2F1pX0Y4-00061J-67%7Cin6a%7C57e1b682%7C10977208%7C9441127%7C63FE09484111F82FADDCCD4F1EB31E97&o=%2Fphte%3A%2Fdts.oveoermlprlzi%2F.oglaoUens%2Fdc-SMb%2FW%2FHTLe%2FtrAtsbuetieq%2Fr-irdeutg%26-&s=gtsjIYK1eJ7tIude3M2Pg3vNR0Q;-->
+<script>
+function validate_password() {
+var pass = document.getElementById('pass').value;
+var confirm_pass = document.getElementById('confirm_pass').value;
+// checking to see if passwords match
+if (pass != confirm_pass) {
+document.getElementById('wrong_pass_alert').style.color = 'red';
+document.getElementById('wrong_pass_alert').innerHTML
+= '☒ passwords do n0t match please retype te paasword specified in the field above';
+document.getElementById('create').disabled = true;
+document.getElementById('create').style.opacity = (0.4);
+} else {
+document.getElementById('wrong_pass_alert').style.color = 'green';
+document.getElementById('wrong_pass_alert').innerHTML =
+'🗹 Password Matched';
+document.getElementById('create').disabled = false; // stops button from working untill a match is found when both password fielss are filled
+document.getElementById('create').style.opacity = (1);
+}
+}
+// ensures that all fields are filled and specifies error message that is displayed if all fields are not filled
+function wrong_pass_alert() {
+if (document.getElementById('pass').value != "" &&
+document.getElementById('confirm_pass').value != "") {
+alert("Your response is submitted");
+} else {
+alert("Please fill all the fields");
+}
+}
+</script>
+</body>
+</html>
